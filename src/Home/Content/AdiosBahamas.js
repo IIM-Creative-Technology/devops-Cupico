@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { render } from "react-dom";
 import { useTrail, animated } from "react-spring";
 import "./AdiosBahamas.css";
