@@ -1,17 +1,15 @@
 export const buddha = [
-
+  {
+    start: 400,
+    end: 500,
+    properties: [
       {
-        start: 400,
-        end: 500,
-        properties: [
-    
-          {
-            startValue: 0,
-            endValue: 0,
-            property: "translateY",
-          },
-        ],
+        startValue: 0,
+        endValue: 0,
+        property: "translateY",
       },
+    ],
+  },
 ];
 
 export const circleLeft = [
@@ -129,22 +127,22 @@ export const cloud1 = [
     properties: [
       {
         startValue: 0,
-        endValue: 375,
+        endValue: 400,
         property: "translateX",
       },
     ],
   },
 ];
 
-export const cloud = [
+export const cloud2 = [
   {
-    start: 0,
-    end: 10,
+    start: 100,
+    end: 600,
     properties: [
       {
         startValue: 0,
-        endValue: 10,
-        property: "translateY",
+        endValue: 250,
+        property: "translateX",
       },
     ],
   },
