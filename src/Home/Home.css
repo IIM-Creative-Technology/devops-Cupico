@@ -9,7 +9,6 @@
 
 .buddha{
     position: absolute;
-    top: 20%;
     background-image: url('/images/buddha.png');
     background-position: center;
     background-size: 7%;
@@ -26,9 +25,9 @@
     background-repeat: no-repeat;
     height: 50%;
     width: 50%;
-    top: 45%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 6%;
     left: 0;
     right:0;
     z-index: 1;
