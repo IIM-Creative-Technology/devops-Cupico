@@ -16,8 +16,9 @@ export const buddha = [
       properties: [
         {
           startValue: 0,
-          endValue: 350,
-          property: "translateY"
+          endValue: 45,
+          property: "translateY",
+          unit: "%"
         },
       ],
     },
