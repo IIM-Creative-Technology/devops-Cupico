@@ -2,7 +2,7 @@ import React from "react";
 import "./Daruma.css";
 
 import Plx from "react-plx";
-import { circleLeft, circleRight, daruma, nepal, cloud, cloud0, cloud1 } from "../Animations/Parrallax";
+import { circleLeft, circleRight, daruma, nepal, cloud0, cloud1 } from "../Animations/Parrallax";
 
 function Daruma() {
   return (
