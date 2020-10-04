@@ -7,28 +7,3 @@
     background-repeat: no-repeat;
 }
 
-.buddha{
-    position: absolute;
-    background-image: url('/images/buddha.png');
-    background-position: center;
-    background-size: 7%;
-    background-repeat: no-repeat;
-    height: 100%;
-    width: 100%;
-}
-
-.plx-buddha{
-    position: absolute;
-    background-image: url('/images/buddha.png');
-    background-position: center;
-    background-size: 10%;
-    background-repeat: no-repeat;
-    height: 50%;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 6%;
-    left: 0;
-    right:0;
-    z-index: 1;
-}

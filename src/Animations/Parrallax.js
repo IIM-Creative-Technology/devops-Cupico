@@ -1,32 +1,17 @@
 export const buddha = [
-  {
-    start: 0,
-    end: 400,
-    properties: [
+
       {
-        startValue: 0,
-        endValue: 1,
-        property: "opacity",
+        start: 400,
+        end: 500,
+        properties: [
+    
+          {
+            startValue: 0,
+            endValue: 0,
+            property: "translateY",
+          },
+        ],
       },
-    ],
-  },
-  {
-    start: 100,
-    duration: 450,
-    properties: [
-      {
-        startValue: 0,
-        endValue: 88,
-        property: "translateY",
-        unit: "%",
-      },
-      {
-        startValue: 1,
-        endValue: 1.5,
-        property: "scale",
-      },
-    ],
-  },
 ];
 
 export const circleLeft = [
@@ -96,7 +81,7 @@ export const daruma = [
 export const nepal = [
   {
     start: 0,
-    end: 300,
+    end: 400,
     properties: [
       {
         startValue: 0,
@@ -106,7 +91,7 @@ export const nepal = [
     ],
   },
   {
-    start: 300,
+    start: 400,
     end: 600,
     properties: [
       {
