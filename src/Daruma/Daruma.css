@@ -1,5 +1,5 @@
 .container-daruma {
-  height: 200vh;
+  height: 120vh;
   width: 100%;
   background: rgb(250,250,250);
 background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(249,249,249,1) 0%, rgba(128,128,128,1) 100%);
@@ -43,16 +43,18 @@ background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(249,249,249,1) 
   text-align: center;
 }
 
-.test {
-  height: 300px;
-  width: 300px;
-  border-radius: 50%;
-  background-color: red;
-
-  transform: rotate(6deg);
+.nepal-picture-left{
+  background-image: url('/images/nepal.jpg');
+  background-position: left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 280px;
+  height: 200px;
+  margin-left: 10%;
+  box-shadow: 0px 0px 3px 0px black;
 }
 
-.cloud{
+.cloud-0, .cloud-1, .cloud-2, .cloud-3{
     background-image: url('/images/cloud.png');
     background-position: center;
     background-size: cover;
@@ -60,4 +62,28 @@ background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(249,249,249,1) 
     width: 100px;
     height: 100px;
     filter: grayscale(100%);
+    position: absolute;
+}
+
+.cloud-0{
+  left: 5%;
+  margin-top: -11%;
+}
+
+.cloud-1{
+  left: 0%;
+  margin-top: -22%;
+  z-index: -1;
+}
+
+.cloud-2{
+  left: 30%;
+  margin-top: -2%;
+  display: none;
+}
+
+.cloud-3{
+  right: 38%;
+  margin-top: 0%;
+  display: none;
 }

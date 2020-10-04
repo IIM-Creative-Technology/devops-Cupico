@@ -1,9 +1,11 @@
 import React from "react";
 import "./App.css";
 
+import Loader from "./Animations/Loader";
 import Home from "./Home/Home";
 import Daruma from "./Daruma/Daruma";
-import Loader from "./Animations/Loader";
+import Nepal from "./Nepal/Nepal";
+
 
 function App() {
   return (
@@ -13,6 +15,7 @@ function App() {
         <Home />
       </header>
       <Daruma />
+      <Nepal />
     </div>
   );
 }
