@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 
 import Home from "./Home/Home";
+import Daruma from "./Daruma/Daruma";
 import Loader from "./Animations/Loader";
 
 function App() {
@@ -11,25 +12,7 @@ function App() {
       <header className="App-header">
         <Home />
       </header>
-      <p>hey</p>
-      <p>hey</p>
-      <p>hey</p>
-      v
-      <p>hey</p>
-      <p>hey</p>
-      v
-      <p>hey</p>
-      <p>hey</p>
-      v
-      <p>hey</p>
-      <p>hey</p>
-      v
-      <p>hey</p>
-      <p>hey</p>
-      v
-      <p>hey</p>
-      
-
+      <Daruma />
     </div>
   );
 }
