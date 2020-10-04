@@ -147,3 +147,34 @@ export const cloud2 = [
     ],
   },
 ];
+
+
+export const title = [
+  {
+    start: 0,
+    end: 540,
+    properties: [
+      {
+        startValue: 0,
+        endValue: 0,
+        property: "opacity",
+      },
+    ],
+  },
+  {
+    start: 540,
+    end: 640,
+    properties: [
+      {
+        startValue: 0,
+        endValue: 1,
+        property: "opacity",
+      },
+      {
+        startValue: 50,
+        endValue: 0,
+        property: "translateY",
+      },
+    ],
+  },
+];
