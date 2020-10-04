@@ -10,6 +10,7 @@ function Daruma() {
       <div className="container-circle">
         <Plx className="circle-left" parallaxData={circleLeft}></Plx>
         <Plx className="circle-right" parallaxData={circleRight}></Plx>
+        <div className="cloud"></div>
       </div>
     </Plx>
   );

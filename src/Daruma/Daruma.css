@@ -1,33 +1,63 @@
-.container-daruma{
-    height: 100vh;
-    width: 100%;
-    background: white;
+.container-daruma {
+  height: 200vh;
+  width: 100%;
+  background: rgb(250,250,250);
+background: linear-gradient(180deg, rgba(250,250,250,1) 0%, rgba(249,249,249,1) 0%, rgba(128,128,128,1) 100%);
 }
 
-.container-circle{
-    margin-left: 39.6%;
-    margin-top: 12%;
-    position: absolute;
+.container-circle {
+  width: 100%;
+  margin-top: 12%;
+  position: absolute;
 }
 
-.circle-left{
-    height: 300px; 
-    width: 300px; 
-    border: 5px solid rgba(0, 0, 0, 1);
-    border-radius: 50%; 
-    border-right: none;
-    border-top: none;
-    border-bottom: none;
-    position: absolute;
+.circle-left {
+  height: 300px;
+  width: 300px;
+  border: 5px solid rgba(0, 0, 0, 1);
+  border-radius: 50%;
+  border-right: none;
+  border-top: none;
+  border-bottom: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
-.circle-right{
-    height: 300px; 
-    width: 300px; 
-    border: 5px solid black;
-    border-radius: 50%; 
-    border-left: none;
-    border-top: none;
-    border-bottom: none;
-    position: absolute;
+.circle-right {
+  height: 300px;
+  width: 300px;
+  border: 5px solid black;
+  border-radius: 50%;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.test {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
+  background-color: red;
+
+  transform: rotate(6deg);
+}
+
+.cloud{
+    background-image: url('/images/cloud.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    filter: grayscale(100%);
 }

@@ -12,11 +12,11 @@ export const buddha = [
     },
     {
       start: 100,
-      duration: 650,
+      duration: 450,
       properties: [
         {
           startValue: 0,
-          endValue: 550,
+          endValue: 350,
           property: "translateY"
         },
       ],
@@ -26,7 +26,7 @@ export const buddha = [
   export const circleLeft = [
     {
       start: 0,
-      end: 750,
+      end: 550,
       properties: [
         {
           startValue: -800,
@@ -51,7 +51,7 @@ export const buddha = [
   export const circleRight = [
     {
       start: 0,
-      end: 750,
+      end: 550,
       properties: [
         {
           startValue: 800,
@@ -76,7 +76,7 @@ export const buddha = [
   export const daruma = [
     {
       start: 0,
-      end: 500,
+      end: 650,
       properties: [
         {
           startValue: 0,
