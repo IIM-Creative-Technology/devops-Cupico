@@ -115,10 +115,17 @@
   text-orientation: upright;
 }
 
+.container-title ul{
+  width: 100%;
+  margin-left: 27%;
+}
+
 .container-title li {
   list-style-type: none;
-  margin: 0 39%;
+  width: 8%;
+  margin: 0 auto;
   font-weight: 600;
+
 }
 
 .container-title span {
