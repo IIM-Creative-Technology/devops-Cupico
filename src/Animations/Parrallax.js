@@ -16,13 +16,13 @@ export const buddha = [
     properties: [
       {
         startValue: 0,
-        endValue: 45,
+        endValue: 88,
         property: "translateY",
         unit: "%",
       },
       {
         startValue: 1,
-        endValue: 1.3,
+        endValue: 1.5,
         property: "scale",
       },
     ],

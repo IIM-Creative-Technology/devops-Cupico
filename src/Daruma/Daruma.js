@@ -13,8 +13,7 @@ function Daruma() {
         <Plx className="nepal-picture-left" parallaxData={nepal}></Plx>
         <Plx className="cloud-0" parallaxData={cloud0}></Plx>
         <Plx className="cloud-1" parallaxData={cloud1}></Plx>
-        <Plx className="cloud-2" parallaxData={cloud}></Plx>
-        <Plx className="cloud-3" parallaxData={cloud}></Plx>
+   
       </div>
     </Plx>
   );
