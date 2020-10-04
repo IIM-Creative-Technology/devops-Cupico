@@ -31,20 +31,6 @@ const parallaxData = [
   },
 ];
 
-const fixed = [
-  {
-    start: 0,
-    end: 300,
-    properties: [
-      {
-        startValue: 1.5,
-        endValue: 0.8,
-        property: "scale",
-      },
-    ],
-  },
-];
-
 function Home() {
   return (
     <div className="background-opening">
