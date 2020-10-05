@@ -6,14 +6,11 @@ import { MdSkipNext } from "react-icons/md";
 
 function Music() {
   useEffect(() => {
-    if (!pause) {
       var audio = document.getElementById("player");
-      audio.play();
-      audio.volume = 0.05;
-    }
+      audio.volume = 0.1;
   });
 
-  const [pause, setPause] = useState(false);
+  const [pause, setPause] = useState(true);
   const pausePlay = () => {
     var audio = document.getElementById("player");
     if (pause === false) {
