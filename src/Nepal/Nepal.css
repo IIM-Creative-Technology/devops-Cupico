@@ -8,15 +8,90 @@
   background-size: cover;
 }
 
-.kamehouse {
-  width: 20%;
-  height: 20%;
-  background-image: url("/images/kamehouse.png");
-  background-repeat: no-repeat;
+.container-liens {
+  width: 35%;
+  margin: 5% auto;
+  padding-top: 30%;
+}
+
+.try {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.splinter {
+  width: 200px;
+  height: 200px;
+  background-image: url("/images/splinter.png");
   background-size: contain;
+  background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
-  margin-top: 63%;
-  right: 0;
-  z-index: 9999;
+  filter: brightness(0.6);
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+.yt {
+  animation-duration: 3s;
+  animation-name: slidein;
+  background-image: url("/images/youtube.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70px;
+  height: 70px;
+  list-style: none;
+  margin-top: 0;
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.spotify {
+  animation-duration: 3s;
+  animation-name: slidein;
+  background-image: url("/images/spotify.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 70px;
+  height: 70px;
+  list-style: none;
+  margin-top: 10%;
+  cursor: pointer;
+  filter: brightness(0.8);
+}
+
+.yt:hover{
+  filter: brightness(1);
+}
+
+.spotify:hover{
+  filter: brightness(1);
+}
+
+@keyframes slidein {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.info {
+  float: right;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  filter: brightness(0.5);
+  margin-top:12%;
+  margin-right: 6%;
+}
+
+.info:hover {
+  filter: brightness(0.8);
 }
