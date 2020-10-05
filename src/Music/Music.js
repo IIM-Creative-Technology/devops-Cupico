@@ -6,8 +6,8 @@ import { MdSkipNext } from "react-icons/md";
 
 function Music() {
   useEffect(() => {
-      var audio = document.getElementById("player");
-      audio.volume = 0.1;
+    var audio = document.getElementById("player");
+    audio.volume = 0.1;
   });
 
   const [pause, setPause] = useState(true);
@@ -22,10 +22,21 @@ function Music() {
     }
   };
 
+  const [scroll, setScroll] = useState(0);
+  useEffect(() => {
+    window.onscroll = function (e) {
+      setScroll(window.scrollY);
+    };
+  });
+
   const [urlMusic, setUrlMusic] = useState("lemonade");
   const nextMusic = () => {
     setUrlMusic("sundance");
   };
+
+  let whiteButton = { color: "black", fontSize: "4em" };
+
+  let blackButton = { color: "white", fontSize: "4em" };
 
   return (
     <div
@@ -59,9 +70,9 @@ function Music() {
         onClick={pausePlay}
       >
         {pause ? (
-          <BsPlayFill style={{ color: "black", fontSize: "4em" }} />
+          <BsPlayFill style={scroll > 1650 ? blackButton : whiteButton} />
         ) : (
-          <BsFillPauseFill style={{ color: "black", fontSize: "4em" }} />
+          <BsFillPauseFill style={scroll > 1650 ? blackButton : whiteButton} />
         )}
       </button>
       <button
@@ -76,14 +87,15 @@ function Music() {
         }}
         onClick={nextMusic}
       >
-        <MdSkipNext className="next" />
+        <MdSkipNext className="next" style={scroll > 1650 ? blackButton : whiteButton} />
       </button>
       <p
         style={{
           position: "absolute",
           left: "8%",
-          textTransform:'uppercase',
-          paddingTop:'0.2%'
+          textTransform: "uppercase",
+          paddingTop: "0.2%",
+          color: scroll > 1650 ? "white" : "black"
         }}
       >
         {urlMusic}
