@@ -74,6 +74,17 @@ export const daruma = [
       },
     ],
   },
+  {
+    start: 651,
+    end: 900,
+    properties: [
+      {
+        startValue: -200,
+        endValue: 0,
+        property: "translateY",
+      },
+    ],
+  },
 ];
 
 export const nepal = [

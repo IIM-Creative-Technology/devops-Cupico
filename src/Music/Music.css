@@ -1,0 +1,8 @@
+.next{
+    color:black;
+    font-size:4em;
+}
+
+.next:hover{
+    color: rgb(85, 85, 85);
+}

@@ -5,11 +5,12 @@ import Loader from "./Animations/Loader";
 import Home from "./Home/Home";
 import Daruma from "./Daruma/Daruma";
 import Nepal from "./Nepal/Nepal";
-
+import Music from "./Music/Music";
 
 function App() {
   return (
     <div className="App">
+      <Music />
       <Loader />
       <header className="App-header">
         <Home />
