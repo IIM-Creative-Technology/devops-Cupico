@@ -9,16 +9,14 @@
 }
 
 .kamehouse {
-  width: 70%;
-  height: 70%;
+  width: 20%;
+  height: 20%;
   background-image: url("/images/kamehouse.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   position: absolute;
-  display: none;
-}
-
-.kamehouse:hover{
-
+  margin-top: 63%;
+  right: 0;
+  z-index: 9999;
 }
