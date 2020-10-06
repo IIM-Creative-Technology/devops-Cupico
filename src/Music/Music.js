@@ -26,7 +26,10 @@ function Music() {
       let time = audio.currentTime;
 
       //////////// FOR VIBE
-      if (time > 10.5 && time < 11.5 && urlMusic === "vibe") {
+      if (time > 1 && time < 2) {
+        setTimeMusic("TEST");
+      }
+      else if (time > 10.5 && time < 11.5 && urlMusic === "vibe") {
         setTimeMusic("VIBE");
       } else if (time > 16 && time < 17 && urlMusic === "vibe") {
         setTimeMusic("VIBE");
@@ -66,6 +69,8 @@ function Music() {
   let whiteButton = { color: "black", fontSize: "4em" };
 
   let blackButton = { color: "white", fontSize: "4em" };
+
+  console.log(timeMusic);
 
   return (
     <div
