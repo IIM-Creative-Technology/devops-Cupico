@@ -27,18 +27,21 @@ function Music() {
 
       //////////// FOR VIBE
       if (time > 1 && time < 2) {
-        setTimeMusic("TEST");
-      } else if (time > 10.5 && time < 11.5 && urlMusic === "vibe") {
-        setTimeMusic("VIBE");
-      } else if (time > 16 && time < 17 && urlMusic === "vibe") {
-        setTimeMusic("VIBE");
-      } else if (time > 27 && time < 28 && urlMusic === "vibe") {
+        return setTimeMusic("TEST");
+      }
+      if (time > 10 && time < 11 && urlMusic === "vibe") {
+        return setTimeMusic("VIBE");
+      }
+      if (time > 16 && time < 17 && urlMusic === "vibe") {
+        return setTimeMusic("VIBE");
+      }
+      if (time > 27 && time < 28 && urlMusic === "vibe") {
         setTimeMusic("Autre chose...");
       } else {
-        setTimeMusic("");
+        return setTimeMusic("");
       }
       //////////// END OF VIBE
-    }, 10);
+    }, 20);
   });
 
   const [timeMusic, setTimeMusic] = useState("");
@@ -99,20 +102,20 @@ function Music() {
         </div>
       )}
 
-        <div
-          style={{
-            width: "200px",
-            height: "100px",
-            position: "fixed",
-            fontSize: "3em",
-            top: "30%",
-            left: "3%",
-            color: scroll > 1650 ? "white" : "black",
-          }}
-          className="opa"
-        >
-          {timeMusic}
-        </div>
+      <div
+        style={{
+          width: "200px",
+          height: "100px",
+          position: "fixed",
+          fontSize: "3em",
+          top: "30%",
+          left: "3%",
+          color: scroll > 1650 ? "white" : "black",
+        }}
+        className="opa"
+      >
+        {timeMusic}
+      </div>
 
       <audio
         controls

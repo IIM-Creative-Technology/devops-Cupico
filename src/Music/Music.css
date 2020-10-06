@@ -16,16 +16,3 @@
     transform: translateY(0px);
   }
 }
-
-.animeopa {
-  animation: opacity2 0.3s both;
-}
-
-@keyframes opacity2 {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
