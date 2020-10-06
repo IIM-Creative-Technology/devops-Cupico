@@ -2,9 +2,18 @@
     color: rgb(85, 85, 85);
 }
 
-.wordMusic{
-    position: fixed;
-    font-size: 3em;
-    top: 50%;
-    left: 50%;
+
+.animeword{
+    animation: opacity 1s forwards;
+}
+
+@keyframes opacity{
+    from{
+        opacity: 0;
+        transform: translateY(50px)
+    }
+    to{
+        opacity: 1;
+        transform: translateY(00px)
+    }
 }

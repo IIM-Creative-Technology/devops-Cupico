@@ -12,30 +12,26 @@ const random = () => {
 
 function Music() {
   const [urlMusic, setUrlMusic] = useState(random()); // la musique qui est jouée
-  const [cssRandom, setCssRandom] = useState(["50%", "50%"]); // le placement css des mots affichés
+  const [scroll, setScroll] = useState(0);
+
   useEffect(() => {
     const audio = document.getElementById("player");
     audio.volume = 0.1;
 
-    setInterval(() => {
-      let randomNumberTop = Math.floor(Math.random() * Math.floor(100));
-      let randomNumberLeft = Math.floor(Math.random() * Math.floor(100));
-      setCssRandom([`${randomNumberTop}%`, `${randomNumberLeft}%`]);
-    }, 15000);
+    window.onscroll = function (e) {
+      setScroll(window.scrollY);
+    };
 
     setInterval(() => {
       let time = audio.currentTime;
 
       //////////// FOR VIBE
-
       if (time > 10.5 && time < 11.5 && urlMusic === "vibe") {
         setTimeMusic("VIBE");
-      } else if (time > 12 && time < 13 && urlMusic === "vibe") {
+      } else if (time > 16 && time < 17 && urlMusic === "vibe") {
         setTimeMusic("VIBE");
-      } else if (time > 15.5 && time < 16 && urlMusic === "vibe") {
-        setTimeMusic("VIBE");
-      }else if (time > 16.5 && time < 17 && urlMusic === "vibe") {
-        setTimeMusic("VIBE");
+      } else if (time > 27 && time < 28 && urlMusic === "vibe") {
+        setTimeMusic("Autre chose...");
       } else {
         setTimeMusic("");
       }
@@ -56,13 +52,6 @@ function Music() {
       audio.play();
     }
   };
-
-  const [scroll, setScroll] = useState(0);
-  useEffect(() => {
-    window.onscroll = function (e) {
-      setScroll(window.scrollY);
-    };
-  });
 
   const nextMusic = async () => {
     let newTitles = await titles.filter((e) => e.name !== urlMusic);
@@ -89,16 +78,23 @@ function Music() {
         marginTop: "1%",
       }}
     >
-      <div
-        style={{
-          position: "fixed",
-          fontSize: "3em",
-          top: cssRandom[0],
-          left: cssRandom[1],
-        }}
-      >
-        {timeMusic}
-      </div>
+      {timeMusic !== "" && (
+        <div
+          style={{
+            width: "200px",
+            height: "100px",
+            position: "fixed",
+            fontSize: "3em",
+            top: "10%",
+            left: "3%",
+            color: scroll > 1650 ? "white" : "black",
+          }}
+          className="animeword"
+        >
+          {timeMusic}
+        </div>
+      )}
+
       <audio
         controls
         src={`music/${urlMusic}.mp3`}
