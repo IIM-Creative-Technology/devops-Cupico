@@ -72,8 +72,6 @@ function Music() {
 
   let blackButton = { color: "white", fontSize: "4em" };
 
-  console.log(timeMusic);
-
   return (
     <div
       style={{
