@@ -14,6 +14,22 @@
     }
     to{
         opacity: 1;
-        transform: translateY(00px)
+        transform: translateY(0px)
+    }
+}
+
+.animeopa{
+    animation: opacity2 0.3s both;
+}
+
+
+@keyframes opacity2{
+    from{
+        opacity: 0;
+    
+    }
+    to{
+        opacity: 1;
+    
     }
 }

@@ -109,6 +109,7 @@ function Music() {
             left: "3%",
             color: scroll > 1650 ? "white" : "black",
           }}
+          className="opa"
         >
           {timeMusic}
         </div>
