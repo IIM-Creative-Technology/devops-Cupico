@@ -4,7 +4,7 @@
 
 
 .animeword{
-    animation: opacity 0.5s;
+    animation: opacity 0.3s both;
 }
 
 @keyframes opacity{

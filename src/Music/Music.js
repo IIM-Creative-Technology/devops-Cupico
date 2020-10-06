@@ -28,8 +28,7 @@ function Music() {
       //////////// FOR VIBE
       if (time > 1 && time < 2) {
         setTimeMusic("TEST");
-      }
-      else if (time > 10.5 && time < 11.5 && urlMusic === "vibe") {
+      } else if (time > 10.5 && time < 11.5 && urlMusic === "vibe") {
         setTimeMusic("VIBE");
       } else if (time > 16 && time < 17 && urlMusic === "vibe") {
         setTimeMusic("VIBE");
@@ -99,6 +98,20 @@ function Music() {
           {timeMusic}
         </div>
       )}
+
+        <div
+          style={{
+            width: "200px",
+            height: "100px",
+            position: "fixed",
+            fontSize: "3em",
+            top: "30%",
+            left: "3%",
+            color: scroll > 1650 ? "white" : "black",
+          }}
+        >
+          {timeMusic}
+        </div>
 
       <audio
         controls
