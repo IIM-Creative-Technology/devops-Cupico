@@ -48,6 +48,7 @@
   left: 0;
   right: 0;
   text-align: center;
+  z-index: 1;
 }
 
 .circle-right {
@@ -64,6 +65,7 @@
   left: 0;
   right: 0;
   text-align: center;
+  z-index: 1;
 }
 
 .nepal-picture-left {
@@ -130,4 +132,52 @@
 
 .container-title span {
   color: grey;
+}
+
+
+@media only screen and (max-width: 576px) {
+  .container-title {
+    width: 100%;
+    margin: 80% auto;
+    font-size: 0.7em;
+  }
+  
+  .container-title ul{
+    width: 100%;
+    margin-left: 9%;
+  }
+  
+  .container-title li {
+    width: 5%;
+    margin: 0 auto;
+    margin-left: 8%;
+  
+  }
+  .nepal-picture-left {
+    background-image: url("/images/nepal.jpg");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 170px;
+    margin-left: 10%;
+    box-shadow: 0px 0px 3px 0px black;
+    z-index: 0;
+  }
+  .plx-buddha {
+    position: absolute;
+    background-image: url("/images/buddha.png");
+    background-position: center;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    height: 80%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15%;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+  
 }

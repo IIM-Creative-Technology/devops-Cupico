@@ -4,9 +4,15 @@ import "./Music.css";
 import { BsPlayFill, BsFillPauseFill } from "react-icons/bs";
 import { MdSkipNext } from "react-icons/md";
 
+import { titles } from "../Constant";
+
+const random = () => {
+  return titles[Math.floor(Math.random() * Math.floor(titles.length))].name;
+};
+
 function Music() {
   useEffect(() => {
-    var audio = document.getElementById("player");
+    const audio = document.getElementById("player");
     audio.volume = 0.1;
   });
 
@@ -29,9 +35,15 @@ function Music() {
     };
   });
 
-  const [urlMusic, setUrlMusic] = useState("lemonade");
-  const nextMusic = () => {
-    setUrlMusic("sundance");
+  const [urlMusic, setUrlMusic] = useState(random());
+  const nextMusic = async () => {
+    let newTitles = await titles.filter((e) => e.name !== urlMusic);
+    await setUrlMusic(
+      newTitles[Math.floor(Math.random() * Math.floor(newTitles.length))].name
+    );
+    let audio = await document.getElementById("player");
+    await audio.play();
+    await setPause(false);
   };
 
   let whiteButton = { color: "black", fontSize: "4em" };
@@ -87,7 +99,10 @@ function Music() {
         }}
         onClick={nextMusic}
       >
-        <MdSkipNext className="next" style={scroll > 1650 ? blackButton : whiteButton} />
+        <MdSkipNext
+          className="next"
+          style={scroll > 1650 ? blackButton : whiteButton}
+        />
       </button>
       <p
         style={{
@@ -95,7 +110,7 @@ function Music() {
           left: "8%",
           textTransform: "uppercase",
           paddingTop: "0.2%",
-          color: scroll > 1650 ? "white" : "black"
+          color: scroll > 1650 ? "white" : "black",
         }}
       >
         {urlMusic}
