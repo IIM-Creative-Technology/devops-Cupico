@@ -1,3 +1,10 @@
 .next:hover{
     color: rgb(85, 85, 85);
 }
+
+.wordMusic{
+    position: fixed;
+    font-size: 3em;
+    top: 50%;
+    left: 50%;
+}

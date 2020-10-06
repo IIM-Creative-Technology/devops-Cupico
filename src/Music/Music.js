@@ -11,10 +11,39 @@ const random = () => {
 };
 
 function Music() {
+  const [urlMusic, setUrlMusic] = useState(random()); // la musique qui est jouée
+  const [cssRandom, setCssRandom] = useState(["50%", "50%"]); // le placement css des mots affichés
   useEffect(() => {
     const audio = document.getElementById("player");
     audio.volume = 0.1;
+
+    setInterval(() => {
+      let randomNumberTop = Math.floor(Math.random() * Math.floor(100));
+      let randomNumberLeft = Math.floor(Math.random() * Math.floor(100));
+      setCssRandom([`${randomNumberTop}%`, `${randomNumberLeft}%`]);
+    }, 15000);
+
+    setInterval(() => {
+      let time = audio.currentTime;
+
+      //////////// FOR VIBE
+
+      if (time > 10.5 && time < 11.5 && urlMusic === "vibe") {
+        setTimeMusic("VIBE");
+      } else if (time > 12 && time < 13 && urlMusic === "vibe") {
+        setTimeMusic("VIBE");
+      } else if (time > 15.5 && time < 16 && urlMusic === "vibe") {
+        setTimeMusic("VIBE");
+      }else if (time > 16.5 && time < 17 && urlMusic === "vibe") {
+        setTimeMusic("VIBE");
+      } else {
+        setTimeMusic("");
+      }
+      //////////// END OF VIBE
+    }, 0);
   });
+
+  const [timeMusic, setTimeMusic] = useState("");
 
   const [pause, setPause] = useState(true);
   const pausePlay = () => {
@@ -35,7 +64,6 @@ function Music() {
     };
   });
 
-  const [urlMusic, setUrlMusic] = useState(random());
   const nextMusic = async () => {
     let newTitles = await titles.filter((e) => e.name !== urlMusic);
     await setUrlMusic(
@@ -61,6 +89,16 @@ function Music() {
         marginTop: "1%",
       }}
     >
+      <div
+        style={{
+          position: "fixed",
+          fontSize: "3em",
+          top: cssRandom[0],
+          left: cssRandom[1],
+        }}
+      >
+        {timeMusic}
+      </div>
       <audio
         controls
         src={`music/${urlMusic}.mp3`}

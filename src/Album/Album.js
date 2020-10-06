@@ -5,8 +5,6 @@ function Album() {
 
   const [album, setAlbum] = useState(["nuits", "disque"]);
 
-  console.log(album[0]);
-
   return (
     <div className="container-album">
       <a
