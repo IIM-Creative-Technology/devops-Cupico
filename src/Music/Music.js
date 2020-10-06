@@ -38,7 +38,7 @@ function Music() {
         setTimeMusic("");
       }
       //////////// END OF VIBE
-    }, 0);
+    }, 10);
   });
 
   const [timeMusic, setTimeMusic] = useState("");
