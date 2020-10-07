@@ -44,7 +44,7 @@ function Music() {
           setTimeMusic("aie");
         } else if (time > 167 && time < 168) {
           setTimeMusic("bien");
-        } else if (time > 168 && time < 169) {
+        } else if (time > 168.3 && time < 169.3) {
           setTimeMusic("mieux");
         } else {
           setTimeMusic("");
@@ -186,7 +186,7 @@ function Music() {
             width: "400px",
             height: "100px",
             position: "fixed",
-            fontSize: "2.5em",
+            fontSize: "2.6em",
             top: Math.floor(Math.random() * Math.floor(80)) + "%",
             left: Math.floor(Math.random() * Math.floor(80)) + "%",
             color: "black",
