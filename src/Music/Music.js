@@ -12,44 +12,86 @@ const random = () => {
 
 function Music() {
   const [urlMusic, setUrlMusic] = useState(random()); // la musique qui est jouée
-  const [scroll, setScroll] = useState(0);
+  const [pause, setPause] = useState(true);
+  const [timeMusic, setTimeMusic] = useState("");
 
   useEffect(() => {
     const audio = document.getElementById("player");
     audio.volume = 0.1;
 
-    window.onscroll = function (e) {
-      setScroll(window.scrollY);
-    };
-  
-      const interval = setInterval(() => {
-        let time = audio.currentTime;
-  
-        //////////// FOR VIBE
-        if (time > 1 && time < 2) {
-          setTimeMusic("TEST");
-        }
-        else if (time > 10 && time < 11 && urlMusic) {
+    const interval = setInterval(() => {
+      let time = audio.currentTime;
+
+      //////////// FOR VIBE
+      if (urlMusic === "vibe" && pause === false) {
+        if (time > 1 && time < 3) {
+          setTimeMusic("test");
+        } else if (time > 10 && time < 11) {
           setTimeMusic("VIBE");
-        }
-        else if (time > 16 && time < 17 && urlMusic) {
+        } else if (time > 16 && time < 17) {
           setTimeMusic("VIBE");
-        }
-        else if (time > 26 && time < 27 && urlMusic === "vibe") {
+        } else if (time > 24.5 && time < 26) {
           setTimeMusic("Si j'ai capte une vibe");
-        } else {
-          setTimeMusic("");
+        } else if (time > 39.5 && time < 41) {
+          setTimeMusic("la la la la la la...");
+        } else if (time > 56 && time < 57) {
+          setTimeMusic("la la la la la la...");
+        } else if (time > 69 && time < 70) {
+          setTimeMusic("mais");
+        } else if (time > 113 && time < 114) {
+          setTimeMusic("vibe");
+        } else if (time > 147.5 && time < 148.5) {
+          setTimeMusic("vengance");
+        } else if (time > 153.5 && time < 154.5) {
+          setTimeMusic("aie");
+        } else if (time > 167 && time < 168) {
+          setTimeMusic("bien");
+        } else if (time > 168 && time < 169) {
+          setTimeMusic("mieux");
         }
-        //////////// END OF VIBE
-      }, 1000);
-      return () => clearInterval(interval);
-    }, [urlMusic]);
+      } else {
+        setTimeMusic("");
+      }
+      //////////// END OF VIBE
+      console.log(time);
+      //////////// FOR SUNDANCE
+      if (urlMusic === "sundance" && pause === false) {
+        if (time > 1 && time < 3) {
+          setTimeMusic("test");
+        } else if (time > 23 && time < 24) {
+          setTimeMusic("du lundi au sunday");
+        } else if (time > 25.5 && time < 26.5) {
+          setTimeMusic("sundance");
+        } else if (time > 29 && time < 30) {
+          setTimeMusic("ennuis");
+        } else if (time > 36 && time < 37) {
+          setTimeMusic("pu l'faire");
+        } else if (time > 44 && time < 45) {
+          setTimeMusic("autres");
+        } else if (time > 45 && time < 46) {
+          setTimeMusic("autres");
+        } else if (time > 46 && time < 47) {
+          setTimeMusic("autres");
+        } else if (time > 66.5 && time < 67) {
+          setTimeMusic("injustice");
+        } else if (time > 77 && time < 78) {
+          setTimeMusic("histoires");
+        } else if (time > 86.5 && time < 87.5) {
+          setTimeMusic("Hermann Hess");
+        }
+        else if (time > 105.5 && time < 106.5) {
+          setTimeMusic("trente façons");
+        }
+      } else {
+        setTimeMusic("");
+      }
+      //////////// END OF SUNDANCE
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [urlMusic, pause]);
 
-
-  const [timeMusic, setTimeMusic] = useState("");
-
-  const [pause, setPause] = useState(true);
   const pausePlay = () => {
+    setTimeMusic("");
     var audio = document.getElementById("player");
     if (pause === false) {
       setPause(true);
@@ -70,11 +112,6 @@ function Music() {
     await setPause(false);
   };
 
-  let whiteButton = { color: "black", fontSize: "4em" };
-
-  let blackButton = { color: "white", fontSize: "4em" };
-
-
   return (
     <div
       style={{
@@ -93,9 +130,9 @@ function Music() {
             height: "100px",
             position: "fixed",
             fontSize: "3em",
-            top: Math.floor(Math.random() * Math.floor(90)) + "%",
-            left: Math.floor(Math.random() * Math.floor(90)) + "%",
-            color: scroll > 1650 ? "white" : "black",
+            top: Math.floor(Math.random() * Math.floor(80)) + "%",
+            left: Math.floor(Math.random() * Math.floor(80)) + "%",
+            color: "black",
           }}
           className="animeword"
         >
@@ -103,7 +140,7 @@ function Music() {
         </div>
       )}
 
-      <div
+      {/*<div
         style={{
           width: "400px",
           height: "100px",
@@ -116,7 +153,7 @@ function Music() {
         className="opa"
       >
         {timeMusic}
-      </div>
+      </div>*/}
 
       <audio
         controls
@@ -139,9 +176,9 @@ function Music() {
         onClick={pausePlay}
       >
         {pause ? (
-          <BsPlayFill style={scroll > 1650 ? blackButton : whiteButton} />
+          <BsPlayFill style={{ color: "black", fontSize: "4em" }} />
         ) : (
-          <BsFillPauseFill style={scroll > 1650 ? blackButton : whiteButton} />
+          <BsFillPauseFill style={{ color: "black", fontSize: "4em" }} />
         )}
       </button>
       <button
@@ -158,7 +195,7 @@ function Music() {
       >
         <MdSkipNext
           className="next"
-          style={scroll > 1650 ? blackButton : whiteButton}
+          style={{ color: "black", fontSize: "4em" }}
         />
       </button>
       <p
@@ -167,7 +204,7 @@ function Music() {
           left: "8%",
           textTransform: "uppercase",
           paddingTop: "0.2%",
-          color: scroll > 1650 ? "white" : "black",
+          color: "black",
         }}
       >
         {urlMusic}
