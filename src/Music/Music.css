@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower');
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower");
 
 .next:hover {
   color: rgb(85, 85, 85);
@@ -6,7 +6,12 @@
 
 .animeword {
   animation: opacity 0.3s both;
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
+  font-size: "2.6em";
+}
+
+.randomButton {
+  left: 3%;
 }
 
 @keyframes opacity {
@@ -17,5 +22,23 @@
   to {
     opacity: 1;
     transform: translateY(0px);
+  }
+}
+
+.musicTitle {
+  left: 8%;
+}
+
+@media only screen and (max-width: 576px) {
+  .animeword {
+ 
+    font-size: 1em;
+  }
+
+  .randomButton {
+    left: 10%;
+  }
+  .musicTitle {
+    left: 30%;
   }
 }

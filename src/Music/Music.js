@@ -186,7 +186,6 @@ function Music() {
             width: "400px",
             height: "100px",
             position: "fixed",
-            fontSize: "2.6em",
             top: Math.floor(Math.random() * Math.floor(80)) + "%",
             left: Math.floor(Math.random() * Math.floor(80)) + "%",
             color: "black",
@@ -245,9 +244,9 @@ function Music() {
           background: "transparent",
           border: "none",
           outline: "none",
-          cursor: "pointer",
-          left: "3%",
+          cursor: "pointer"
         }}
+        className="randomButton"
         onClick={nextMusic}
       >
         <MdSkipNext
@@ -258,11 +257,11 @@ function Music() {
       <p
         style={{
           position: "absolute",
-          left: "8%",
           textTransform: "uppercase",
           paddingTop: "0.2%",
           color: "black",
         }}
+        className="musicTitle"
       >
         {urlMusic}
       </p>
