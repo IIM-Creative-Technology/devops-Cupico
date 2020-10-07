@@ -1,9 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower');
+
 .next:hover {
   color: rgb(85, 85, 85);
 }
 
 .animeword {
   animation: opacity 0.3s both;
+  font-family: 'Indie Flower', cursive;
 }
 
 @keyframes opacity {

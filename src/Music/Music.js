@@ -24,9 +24,7 @@ function Music() {
 
       //////////// FOR VIBE
       if (urlMusic === "vibe" && pause === false) {
-        if (time > 1 && time < 3) {
-          setTimeMusic("test");
-        } else if (time > 10 && time < 11) {
+        if (time > 10 && time < 11) {
           setTimeMusic("VIBE");
         } else if (time > 16 && time < 17) {
           setTimeMusic("VIBE");
@@ -48,17 +46,15 @@ function Music() {
           setTimeMusic("bien");
         } else if (time > 168 && time < 169) {
           setTimeMusic("mieux");
+        } else {
+          setTimeMusic("");
         }
-      } else {
-        setTimeMusic("");
       }
       //////////// END OF VIBE
-      console.log(time);
+
       //////////// FOR SUNDANCE
       if (urlMusic === "sundance" && pause === false) {
-        if (time > 1 && time < 3) {
-          setTimeMusic("test");
-        } else if (time > 23 && time < 24) {
+        if (time > 23 && time < 24) {
           setTimeMusic("du lundi au sunday");
         } else if (time > 25.5 && time < 26.5) {
           setTimeMusic("sundance");
@@ -78,17 +74,78 @@ function Music() {
           setTimeMusic("histoires");
         } else if (time > 86.5 && time < 87.5) {
           setTimeMusic("Hermann Hess");
-        }
-        else if (time > 105.5 && time < 106.5) {
+        } else if (time > 105.5 && time < 106.5) {
           setTimeMusic("trente façons");
+        } else {
+          setTimeMusic("");
         }
-      } else {
-        setTimeMusic("");
       }
+      //////////// END OF SUNDANCE
+
+      //////////// FOR LEMONADE
+      if (urlMusic === "lemonade" && pause === false) {
+        if (time > 13.9 && time < 14.9) {
+          setTimeMusic("tout pour se barrer");
+        } else if (time > 15.9 && time < 16.9) {
+          setTimeMusic("pour calmer nos nerfs");
+        } else if (time > 19.5 && time < 20.5) {
+          setTimeMusic("ça s'rait honnête ?");
+        } else if (time > 23.5 && time < 24.5) {
+          setTimeMusic("lemonade");
+        } else if (time > 27.5 && time < 28.5) {
+          setTimeMusic("lemo'-lemo");
+        } else if (time > 33 && time < 34) {
+          setTimeMusic("on pourrait en parler");
+        } else if (time > 38.5 && time < 39.5) {
+          setTimeMusic("lemonade");
+        } else if (time > 45 && time < 46) {
+          setTimeMusic("bruit");
+        } else if (time > 53 && time < 54) {
+          setTimeMusic("city");
+        } else if (time > 74.7 && time < 75.7) {
+          setTimeMusic("j'coupe mes émotions");
+        } else {
+          setTimeMusic("");
+        }
+      }
+      //////////// END OF SUNDANCE
+
+      //////////// FOR CROSSFADER
+      if (urlMusic === "crossfader" && pause === false) {
+        if (time > 2.5 && time < 3.5) {
+          setTimeMusic("crossfader");
+        } else if (time > 9.7 && time < 10.7) {
+          setTimeMusic("ghostwritter");
+        } else if (time > 28.4 && time < 29.4) {
+          setTimeMusic("one up");
+        } else if (time > 31 && time < 32) {
+          setTimeMusic("one down");
+        } else if (time > 48.5 && time < 49.5) {
+          setTimeMusic("les heures");
+        } else if (time > 64 && time < 65) {
+          setTimeMusic("un coeur");
+        } else if (time > 70.7 && time < 71.7) {
+          setTimeMusic("ailleurs");
+        } else if (time > 82.4 && time < 83.4) {
+          setTimeMusic("one up");
+        } else if (time > 84.8 && time < 85.8) {
+          setTimeMusic("one down");
+        } else if (time > 108 && time < 109) {
+          setTimeMusic("arianna grande");
+        } else if (time > 121.7 && time < 122.7) {
+          setTimeMusic("zombies s'approchent");
+        } else if (time > 127.1 && time < 128.1) {
+          setTimeMusic("puissance des mots");
+        } else {
+          setTimeMusic("");
+        }
+      }
+
+      console.log(timeMusic);
       //////////// END OF SUNDANCE
     }, 1000);
     return () => clearInterval(interval);
-  }, [urlMusic, pause]);
+  }, [urlMusic, pause, timeMusic]);
 
   const pausePlay = () => {
     setTimeMusic("");
@@ -107,7 +164,7 @@ function Music() {
     await setUrlMusic(
       newTitles[Math.floor(Math.random() * Math.floor(newTitles.length))].name
     );
-    let audio = await document.getElementById("player");
+    let audio = document.getElementById("player");
     await audio.play();
     await setPause(false);
   };
@@ -129,7 +186,7 @@ function Music() {
             width: "400px",
             height: "100px",
             position: "fixed",
-            fontSize: "3em",
+            fontSize: "2.5em",
             top: Math.floor(Math.random() * Math.floor(80)) + "%",
             left: Math.floor(Math.random() * Math.floor(80)) + "%",
             color: "black",
