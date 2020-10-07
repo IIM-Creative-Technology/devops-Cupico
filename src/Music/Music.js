@@ -21,28 +21,30 @@ function Music() {
     window.onscroll = function (e) {
       setScroll(window.scrollY);
     };
+  
+      const interval = setInterval(() => {
+        let time = audio.currentTime;
+  
+        //////////// FOR VIBE
+        if (time > 1 && time < 2) {
+          setTimeMusic("TEST");
+        }
+        else if (time > 10 && time < 11 && urlMusic) {
+          setTimeMusic("VIBE");
+        }
+        else if (time > 16 && time < 17 && urlMusic) {
+          setTimeMusic("VIBE");
+        }
+        else if (time > 27 && time < 28 && urlMusic === "vibe") {
+          setTimeMusic("Autre chose...");
+        } else {
+          setTimeMusic("");
+        }
+        //////////// END OF VIBE
+      }, 1000);
+      return () => clearInterval(interval);
+    }, [urlMusic]);
 
-    setInterval(() => {
-      let time = audio.currentTime;
-
-      //////////// FOR VIBE
-      if (time > 1 && time < 2) {
-        return setTimeMusic("TEST");
-      }
-      if (time > 10 && time < 11 && urlMusic === "vibe") {
-        return setTimeMusic("VIBE");
-      }
-      if (time > 16 && time < 17 && urlMusic === "vibe") {
-        return setTimeMusic("VIBE");
-      }
-      if (time > 27 && time < 28 && urlMusic === "vibe") {
-        setTimeMusic("Autre chose...");
-      } else {
-        return setTimeMusic("");
-      }
-      //////////// END OF VIBE
-    }, 20);
-  });
 
   const [timeMusic, setTimeMusic] = useState("");
 
@@ -71,6 +73,7 @@ function Music() {
   let whiteButton = { color: "black", fontSize: "4em" };
 
   let blackButton = { color: "white", fontSize: "4em" };
+
 
   return (
     <div
