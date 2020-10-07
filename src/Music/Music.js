@@ -98,7 +98,7 @@ function Music() {
           setTimeMusic("on pourrait en parler");
         } else if (time > 38.5 && time < 39.5) {
           setTimeMusic("lemonade");
-        } else if (time > 45 && time < 46) {
+        } else if (time > 45.3 && time < 46.3) {
           setTimeMusic("bruit");
         } else if (time > 53 && time < 54) {
           setTimeMusic("city");
@@ -122,19 +122,19 @@ function Music() {
           setTimeMusic("one down");
         } else if (time > 48.5 && time < 49.5) {
           setTimeMusic("les heures");
-        } else if (time > 64 && time < 65) {
+        } else if (time > 63 && time < 64) {
           setTimeMusic("un coeur");
         } else if (time > 70.7 && time < 71.7) {
           setTimeMusic("ailleurs");
-        } else if (time > 82.4 && time < 83.4) {
+        } else if (time > 82.6 && time < 83.6) {
           setTimeMusic("one up");
-        } else if (time > 84.8 && time < 85.8) {
+        } else if (time > 84.4 && time < 85.4) {
           setTimeMusic("one down");
         } else if (time > 108 && time < 109) {
           setTimeMusic("arianna grande");
-        } else if (time > 121.7 && time < 122.7) {
+        } else if (time > 121 && time < 122) {
           setTimeMusic("zombies s'approchent");
-        } else if (time > 127.1 && time < 128.1) {
+        } else if (time > 126 && time < 127) {
           setTimeMusic("puissance des mots");
         } else {
           setTimeMusic("");
