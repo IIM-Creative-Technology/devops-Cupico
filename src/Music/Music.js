@@ -35,8 +35,8 @@ function Music() {
         else if (time > 16 && time < 17 && urlMusic) {
           setTimeMusic("VIBE");
         }
-        else if (time > 27 && time < 28 && urlMusic === "vibe") {
-          setTimeMusic("Autre chose...");
+        else if (time > 26 && time < 27 && urlMusic === "vibe") {
+          setTimeMusic("Si j'ai capte une vibe");
         } else {
           setTimeMusic("");
         }
@@ -89,12 +89,12 @@ function Music() {
       {timeMusic !== "" && (
         <div
           style={{
-            width: "200px",
+            width: "400px",
             height: "100px",
             position: "fixed",
             fontSize: "3em",
-            top: "10%",
-            left: "3%",
+            top: Math.floor(Math.random() * Math.floor(90)) + "%",
+            left: Math.floor(Math.random() * Math.floor(90)) + "%",
             color: scroll > 1650 ? "white" : "black",
           }}
           className="animeword"
@@ -105,12 +105,12 @@ function Music() {
 
       <div
         style={{
-          width: "200px",
+          width: "400px",
           height: "100px",
           position: "fixed",
           fontSize: "3em",
-          top: "30%",
-          left: "3%",
+          top: Math.floor(Math.random() * Math.floor(100)) + "%",
+          left: Math.floor(Math.random() * Math.floor(100)) + "%",
           color: scroll > 1650 ? "white" : "black",
         }}
         className="opa"
