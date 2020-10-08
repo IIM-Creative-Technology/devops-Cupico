@@ -120,7 +120,7 @@ export const nepal = [
 export const cloud0 = [
   {
     start: 250,
-    end: 550,
+    end: 900,
     properties: [
       {
         startValue: 0,
@@ -134,11 +134,11 @@ export const cloud0 = [
 export const cloud1 = [
   {
     start: 100,
-    end: 600,
+    end: 900,
     properties: [
       {
         startValue: 0,
-        endValue: 400,
+        endValue: 500,
         property: "translateX",
       },
     ],
@@ -148,11 +148,11 @@ export const cloud1 = [
 export const cloud2 = [
   {
     start: 100,
-    end: 600,
+    end: 900,
     properties: [
       {
         startValue: 0,
-        endValue: 250,
+        endValue: 400,
         property: "translateX",
       },
     ],

@@ -102,7 +102,7 @@ function Music() {
           setTimeMusic("bruit");
         } else if (time > 53 && time < 54) {
           setTimeMusic("city");
-        } else if (time > 74.7 && time < 75.7) {
+        } else if (time > 74 && time < 75) {
           setTimeMusic("j'coupe mes émotions");
         } else {
           setTimeMusic("");
