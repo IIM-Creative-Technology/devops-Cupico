@@ -16,9 +16,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      #ESLint 
-      - uses: stefanoeb/eslint-action@1.0.2
-
       - name: Install Dependencies
         run: yarn
 
