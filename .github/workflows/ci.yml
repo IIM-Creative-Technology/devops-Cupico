@@ -1,6 +1,8 @@
-name: Continuous Integration
-
-on: [push_request]
+name: Continuous Deployment
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   buildAndTest:
