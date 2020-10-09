@@ -34,59 +34,59 @@ function Daruma() {
         <ul className="title-left">
           <li>
             Opening <br />
-            <span>オープニング</span>
+            {/*<span>オープニング</span> */}
           </li>
           <li>
-            Ennemies Pt. 2 <br /> <span>敵</span>
+            Ennemies Pt. 2 <br />  {/*<span>敵</span>*/}
           </li>
           <li>
             En face
-            <br /> <span>敵</span>
+            <br />  {/* <span>敵</span>*/}
           </li>
           <li>
             Trajectoire
             <br />
-            <span>道</span>
+            {/*<span>道</span>*/}
           </li>
           <li>
             Vibe
             <br />
-            <span>雰囲気</span>
+            {/*<span>雰囲気</span>*/}
           </li>
           <li>
             Lemonade
             <br />
-            <span>レモネード</span>
+            {/*<span>レモネード</span>*/}
           </li>
           <li>
             Là-bas
             <br />
-            <span>あそこ</span>
+            {/*<span>あそこ</span>*/}
           </li>
           <li>
             Sundance
             <br />
-            <span>サンダンス</span>
+           {/* <span>サンダンス</span>*/}
           </li>
           <li>
             Millionaire
             <br />
-            <span>富豪</span>
+            {/*<span>富豪</span>*/}
           </li>
           <li>
             Sans voir
             <br />
-            <span>見ずに</span>
+           {/* <span>見ずに</span>*/}
           </li>
           <li>
             Crossfader
             <br />
-            <span>クロスフェーダー</span>
+            {/*<span>クロスフェーダー</span>*/}
           </li>
           <li>
             Daruma
             <br />
-            <span>だるま</span>
+             {/*<span>だるま</span>*/}
           </li>
         </ul>
       </Plx>
