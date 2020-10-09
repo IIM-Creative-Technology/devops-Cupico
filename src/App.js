@@ -11,11 +11,11 @@ import Album from "./Album/Album";
 function App() {
   return (
     <div className="App">
-      <Music />
+      {/*<Music />*/}
       <Loader />
-      <header className="App-header">
-        {/*<Home />*/}
-      </header>
+      {/*<header className="App-header">
+        <Home />
+      </header>*/}
       {/*<Daruma />*/}
       <Nepal />
       <Album />
