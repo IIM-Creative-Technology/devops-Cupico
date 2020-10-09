@@ -1,5 +1,4 @@
 import React from "react";
-import { render } from "react-dom";
 import { useTrail, animated } from "react-spring";
 import "./AdiosBahamas.css";
 
@@ -36,4 +35,3 @@ export default function AdiosBahamas() {
   );
 }
 
-render(<AdiosBahamas />, document.getElementById("root"));
