@@ -19,13 +19,16 @@ export default function AdiosBahamas() {
     <div className="trails-main">
       <div className="align-letter">
         {trail.map(({ x, height, ...rest }, index) => (
-          <div
+          <animated.div
             key={index}
             className={`trails-text letter${index}`}
-          
+            style={{
+              ...rest,
+              transform: x.interpolate((x) => `translate3d(0,${x}px,0)`),
+            }}
           >
-      
-          </div>
+            <animated.div style={{ height }}>{items[index]}</animated.div>
+          </animated.div>
         ))}
       </div>
     </div>

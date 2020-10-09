@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 
 import Loader from "./Animations/Loader";
-import Home from "./Home/Home";
+//import Home from "./Home/Home";
 //import Daruma from "./Daruma/Daruma";
 import Nepal from "./Nepal/Nepal";
 import Music from "./Music/Music";
@@ -14,7 +14,7 @@ function App() {
       <Music />
       <Loader />
       <header className="App-header">
-        <Home />
+        {/*<Home />*/}
       </header>
       {/*<Daruma />*/}
       <Nepal />
