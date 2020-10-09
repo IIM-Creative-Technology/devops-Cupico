@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 
-import Loader from "./Animations/Loader";
+//import Loader from "./Animations/Loader";
 //import Home from "./Home/Home";
 //import Daruma from "./Daruma/Daruma";
 //import Nepal from "./Nepal/Nepal";
