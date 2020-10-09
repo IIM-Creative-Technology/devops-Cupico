@@ -165,11 +165,7 @@
     z-index: 0;
   }
   .plx-buddha {
-    position: absolute;
-    background-image: url("/images/buddha.png");
-    background-position: center;
     background-size: 35%;
-    background-repeat: no-repeat;
     height: 80%;
     width: 80%;
     margin-left: auto;
