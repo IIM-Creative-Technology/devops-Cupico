@@ -20,7 +20,7 @@ export default function AdiosBahamas() {
       <div className="align-letter">
         {trail.map(({ x, height, ...rest }, index) => (
           <animated.div
-            key={items[index]}
+            key={index}
             className={`trails-text letter${index}`}
             style={{
               ...rest,
