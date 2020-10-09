@@ -15,7 +15,7 @@ jobs:
         run: yarn
 
       - name: Build
-        run: yarn build
+        run: npm build
 
       - name: Test
-        run: yarn test --watchAll=false
+        run: npm test --watchAll=false
