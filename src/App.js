@@ -5,7 +5,7 @@ import Loader from "./Animations/Loader";
 //import Home from "./Home/Home";
 //import Daruma from "./Daruma/Daruma";
 import Nepal from "./Nepal/Nepal";
-import Music from "./Music/Music";
+//import Music from "./Music/Music";
 import Album from "./Album/Album";
 
 function App() {
