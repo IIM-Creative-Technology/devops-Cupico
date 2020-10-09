@@ -3,7 +3,7 @@ import "./App.css";
 
 import Loader from "./Animations/Loader";
 import Home from "./Home/Home";
-import Daruma from "./Daruma/Daruma";
+//import Daruma from "./Daruma/Daruma";
 import Nepal from "./Nepal/Nepal";
 import Music from "./Music/Music";
 import Album from "./Album/Album";
@@ -16,7 +16,7 @@ function App() {
       <header className="App-header">
         <Home />
       </header>
-      <Daruma />
+      {/*<Daruma />*/}
       <Nepal />
       <Album />
     </div>
