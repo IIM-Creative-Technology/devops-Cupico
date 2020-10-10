@@ -1,6 +1,9 @@
 name: Continuous Deployment
 
-on: [pull_request]
+on:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   buildAndTest:
