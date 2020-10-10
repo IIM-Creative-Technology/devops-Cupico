@@ -1,6 +1,7 @@
 name: Continuous Deployment
+
 on:
-  push:
+  pull_request:
     branches:
       - main
 
@@ -18,4 +19,4 @@ jobs:
         run: yarn build
 
       - name: Test
-        run: yarn test --watchAll=false
+        uses: guahanweb/actions/node-app@master
