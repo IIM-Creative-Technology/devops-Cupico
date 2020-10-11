@@ -5,7 +5,7 @@ on:
       - main
 jobs:
   Deploy:
-    name: Deploy for Heroku...
+    name: Deploy for Heroku prod
     runs-on: ubuntu-18.04
     steps:
       - name: Checkout code
