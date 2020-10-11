@@ -1,13 +1,11 @@
 name: Continuous Integrationfor Heroku
-
 on:
   push:
     branches:
       - development
-
 jobs:
   Deploy:
-    name: Deploy for heroku...
+    name: Deploy for heroku development
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -20,8 +18,8 @@ jobs:
       - name: eslint
         uses: icrawl/action-eslint@v1
       - name: Heroku deploy
-        uses: akhileshns/heroku-deploy@v3.5.6
+        uses: akhileshns/heroku-deploy@v3.5.7
         with:
-          heroku_api_key: ${{secrets.HEROKU_KEY}}
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_DEVELOPMENT}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
