@@ -14,7 +14,7 @@ Après c'est pas fini, mais j'ai voulu faire un truc joli et sympa, sans trop su
 
 ### Explication CI/CD et principe
 
-Il y a, à chaque modification du code source, une verification qui passe avec Github Actions. En effet, lors de la détection de changement sur le code source, il va exécuter la pipeline (workflow). De ce fait, il va avoir une suite de tâches à exécuter (il y a deux cas, car il existe development.yml & prod.yml. A chaque fois que l'on va push sur la branche "development", on va utiliser development.yml et à chaque fois que on va pull sur la branche "main", on utilise prod.yml) :
+Il y a, à chaque modification du code source, une verification qui passe avec Github Actions. En effet, lors de la détection de changement sur le code source, il va exécuter la pipeline (workflow). De ce fait, il va avoir une suite de tâches à exécuter (ici, il y a deux cas : à chaque fois que l'on va push sur la branche "development", on va utiliser development.yml et à chaque fois que on va pull sur la branche "main", on utilise prod.yml) :
 - Pour Checkout code : on récupère le code source (en utilisant actions/checkout@v2)
 - Ensuite on install Node v12 (actions/setup-node@v1)
 - On installe les dépendance du projet "npm install"
