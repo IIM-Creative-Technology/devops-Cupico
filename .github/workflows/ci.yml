@@ -10,13 +10,12 @@ jobs:
     name: Build and Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-
-      - name: Install Dependencies
-        run: yarn
-
-      - name: Build
-        run: yarn build
-
-      - name: Test
-        run: yarn test --watchAll=false
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: install node v12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm install
+      - name: eslint
+        uses: icrawl/action-eslint@v1
