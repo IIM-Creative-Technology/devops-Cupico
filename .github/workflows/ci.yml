@@ -1,13 +1,13 @@
 name: Continuous Integration
 
 on:
-  pull_request:
+  push:
     branches:
-      - main
+      - development
 
 jobs:
-  buildAndTest:
-    name: Build and Test
+  Deploy:
+    name: Deploy for heroku...
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
