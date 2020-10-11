@@ -1,14 +1,12 @@
-name: Continuous Integration
-
+name: Deploy website to heroku - Continous Deployment
 on:
-  pull_request:
+  push:
     branches:
       - main
-
 jobs:
-  buildAndTest:
-    name: Build and Test
-    runs-on: ubuntu-latest
+  Deploy:
+    name: Lint, Build and Deploy
+    runs-on: ubuntu-18.04
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -23,6 +21,5 @@ jobs:
         uses: akhileshns/heroku-deploy@v3.5.7
         with:
           heroku_api_key: ${{secrets.HEROKU_KEY}}
-          heroku_app_name: ${{secrets.HEROKU_APP_DEVELOPMENT}}
+          heroku_app_name: ${{secrets.HEROKU_APP}}
           heroku_email: ${{secrets.HEROKU_EMAIL}}
-
