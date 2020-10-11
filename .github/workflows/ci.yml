@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 name: Continuous Integration - Deploy heroku
+=======
+name: Continuous Integration
+>>>>>>> fa49bee30ebe2119e592e2fa79a185287b2515e0
 
 on:
   pull_request:
@@ -20,9 +24,16 @@ jobs:
       - name: eslint
         uses: icrawl/action-eslint@v1
       - name: Heroku deploy
+<<<<<<< HEAD
         uses: akhileshns/heroku-deploy@v3.5.6
         with:
           heroku_api_key: ${{secrets.HEROKU_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP}}
+=======
+        uses: akhileshns/heroku-deploy@v3.5.7
+        with:
+          heroku_api_key: ${{secrets.HEROKU_KEY}}
+          heroku_app_name: ${{secrets.HEROKU_APP_DEVELOPMENT}}
+>>>>>>> fa49bee30ebe2119e592e2fa79a185287b2515e0
           heroku_email: ${{secrets.HEROKU_EMAIL}}
 
